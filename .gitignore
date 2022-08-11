@@ -1,1 +1,4 @@
 .env
+simulator/.idea
+simulator/.env
+.history/
