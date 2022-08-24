@@ -23,7 +23,7 @@ func NewKafkaProducer() *ckafka.Producer {
 
 func Publish(msg string, topic string, producer *ckafka.Producer) error {
 	message := &ckafka.Message{
-		TopicPartition: ckafka.TopicPartition{Topic: &topic, Partition: ckafka.PartitionAny-1},
+		TopicPartition: ckafka.TopicPartition{Topic: &topic, Partition: ckafka.PartitionAny},
 		Value:          []byte(msg),
 	}
 	err := producer.Produce(message, nil)
