@@ -7,4 +7,8 @@ services:
     volumes:
       - .:/go/src/
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"
+      - "docker.for.win.host.internal:172.17.0.1"
+networks:
+  default:
+    external:
+      name: apache-kafka_default
